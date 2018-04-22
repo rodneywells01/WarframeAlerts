@@ -7,6 +7,8 @@ def get_warframe_data(data_url):
 	status = response.status_code
 	if status != 200:
 		print(f"Error communicating with Warframe servers. {str(status)}")
+		raise IOError
+		
 	return response
 	
 
